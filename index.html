@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="GovTech Modernisation & Design Readiness Playbook — A strategic reference tool for Senior Design Talent.">
+
+  <!-- Theme & PWA meta -->
+  <meta name="theme-color" content="#1a54a4">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Design Playbook">
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Apple Touch Icon (iOS home screen) -->
+  <link rel="apple-touch-icon" href="assets/icons/icon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/icon.svg">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <title>Design Playbook — GovTech</title>
+</head>
+<body>
+<div id="app">
+
+  <!-- ======================================================
+       Header (mobile / tablet only — hidden on desktop)
+  ====================================================== -->
+  <header id="app-header" role="banner">
+    <div class="header-inner">
+      <div class="header-title">
+        <span class="header-logo" aria-hidden="true">🏛️</span>
+        <div>
+          <h1 class="header-name">Design Playbook</h1>
+          <p class="header-subtitle">GovTech Modernisation & Design Readiness</p>
+        </div>
+      </div>
+      <span class="version-badge" aria-label="Version 1.1">v1.1</span>
+    </div>
+  </header>
+
+  <!-- ======================================================
+       Main Content — Tab Panels
+  ====================================================== -->
+  <main id="main-content" role="main">
+
+    <!-- ------------------------------------------------
+         Tab 1: About
+    ------------------------------------------------ -->
+    <section
+      id="tab-about"
+      class="tab-panel"
+      role="tabpanel"
+      aria-labelledby="nav-about"
+      aria-hidden="false"
+    >
+      <div class="panel-header">
+        <div class="panel-icon" aria-hidden="true">📖</div>
+        <div>
+          <h2 class="panel-title">About This Playbook</h2>
+          <p class="panel-subtitle">Your guide to what's inside and why it matters</p>
+        </div>
+      </div>
+
+      <p class="panel-intro">
+        Government digital products touch millions of lives — but many run on systems
+        that are outdated, expensive to maintain, and frustrating to use. This playbook
+        is a practical reference for anyone involved in making those products better.
+        It covers what to look for, which tools to use, and how to build things that
+        last. Whether you're deeply technical or just getting oriented, start here.
+      </p>
+
+      <div class="card-grid">
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <span class="infra-icon" aria-hidden="true">📋</span>
+            <div>
+              <h3 class="infra-name">IMPACT Audit</h3>
+              <span class="infra-full-name">Strategy — Know when to fix and when to rebuild</span>
+            </div>
+          </div>
+          <p class="infra-desc">
+            Government systems often keep running long past their usefulness — not
+            because they work well, but because no one has paused to ask the right
+            questions. The IMPACT Audit gives you a structured checklist to decide
+            whether a system is worth fixing, rebuilding, or retiring. Use it at
+            the start of any modernisation project to get everyone aligned.
+          </p>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <span class="infra-icon" aria-hidden="true">🤖</span>
+            <div>
+              <h3 class="infra-name">AI &amp; Engineering Layer</h3>
+              <span class="infra-full-name">Efficiency — Speed with safety</span>
+            </div>
+          </div>
+          <p class="infra-desc">
+            AI is changing how digital products are built — but speed without safety
+            can cause real harm in government services. This section covers the tools
+            GovTech uses to make AI features reliable before they go live and safe
+            while they're running. It also introduces a way of working that shortens
+            the gap between an idea and a testable prototype.
+          </p>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <span class="infra-icon" aria-hidden="true">🏗️</span>
+            <div>
+              <h3 class="infra-name">Infrastructure Standard</h3>
+              <span class="infra-full-name">Execution — Build on shared foundations</span>
+            </div>
+          </div>
+          <p class="infra-desc">
+            Singapore's government has shared building blocks — a design system and
+            a technology stack — so no team starts from zero. They handle
+            accessibility, security, and connections to national services like
+            Singpass out of the box. This section explains what these standards are
+            and why they're the right starting point for any new product.
+          </p>
+        </div>
+
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <span class="infra-icon" aria-hidden="true">🌉</span>
+            <div>
+              <h3 class="infra-name">Value Proposition</h3>
+              <span class="infra-full-name">For Nav Pawera — Principal Designer, GovTech</span>
+            </div>
+          </div>
+          <p class="infra-desc">
+            This section makes the case for why a designer with healthtech
+            experience — including work with MOH, MSF, and large enterprise systems
+            — is well-placed to contribute to GovTech's mission. It draws a clear
+            line from past delivery at organisational scale to what it takes to
+            design for six million citizens.
+          </p>
+        </div>
+
+      </div><!-- /card-grid -->
+
+      <div class="info-callout" role="note">
+        <span class="callout-icon" aria-hidden="true">💡</span>
+        <p>Use the tabs to explore each section in depth. Everything here is a working reference — come back whenever you need it.</p>
+      </div>
+
+    </section>
+
+
+    <!-- ------------------------------------------------
+         Tab 2: IMPACT Framework Audit
+    ------------------------------------------------ -->
+    <section
+      id="tab-impact"
+      class="tab-panel hidden"
+      role="tabpanel"
+      aria-labelledby="nav-impact"
+      aria-hidden="true"
+    >
+      <div class="panel-header">
+        <div class="panel-icon" aria-hidden="true">📋</div>
+        <div>
+          <h2 class="panel-title">IMPACT Framework Audit</h2>
+          <p class="panel-subtitle">Strategy — Untangling Legacy Government Systems</p>
+        </div>
+      </div>
+
+      <!-- Audit Progress Bar -->
+      <div class="audit-progress-wrap">
+        <div class="audit-progress-label">
+          <span>Audit Progress</span>
+          <span id="impact-progress-text">0 / 4 complete</span>
+        </div>
+        <div
+          class="progress-bar"
+          role="progressbar"
+          aria-label="Audit completion progress"
+          aria-valuemin="0"
+          aria-valuemax="4"
+          aria-valuenow="0"
+        >
+          <div class="progress-fill" id="impact-progress-fill"></div>
+        </div>
+      </div>
+
+      <!-- Interactive Checklist -->
+      <div class="checklist" id="impact-checklist" role="group" aria-label="IMPACT audit checklist">
+
+        <div class="checklist-item" data-id="business-fitness">
+          <label class="checklist-label">
+            <input
+              type="checkbox"
+              class="checklist-checkbox"
+              aria-describedby="desc-business-fitness"
+            >
+            <div class="checklist-box" aria-hidden="true">
+              <span class="check-icon">✓</span>
+            </div>
+            <div class="checklist-content">
+              <span class="checklist-item-title">Business Fitness</span>
+              <p class="checklist-item-desc" id="desc-business-fitness">
+                Does the product hinder policy implementation or frustrate citizens?
+              </p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item" data-id="technical-fitness">
+          <label class="checklist-label">
+            <input
+              type="checkbox"
+              class="checklist-checkbox"
+              aria-describedby="desc-technical-fitness"
+            >
+            <div class="checklist-box" aria-hidden="true">
+              <span class="check-icon">✓</span>
+            </div>
+            <div class="checklist-content">
+              <span class="checklist-item-title">Technical Fitness</span>
+              <p class="checklist-item-desc" id="desc-technical-fitness">
+                Is the stack insecure, brittle, or incompatible with the SG Tech Stack (SGTS)?
+              </p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item" data-id="cost-fitness">
+          <label class="checklist-label">
+            <input
+              type="checkbox"
+              class="checklist-checkbox"
+              aria-describedby="desc-cost-fitness"
+            >
+            <div class="checklist-box" aria-hidden="true">
+              <span class="check-icon">✓</span>
+            </div>
+            <div class="checklist-content">
+              <span class="checklist-item-title">Cost Fitness</span>
+              <p class="checklist-item-desc" id="desc-cost-fitness">
+                Are maintenance costs disproportionate to the value delivered?
+              </p>
+            </div>
+          </label>
+        </div>
+
+        <div class="checklist-item" data-id="outcome-parity">
+          <label class="checklist-label">
+            <input
+              type="checkbox"
+              class="checklist-checkbox"
+              aria-describedby="desc-outcome-parity"
+            >
+            <div class="checklist-box" aria-hidden="true">
+              <span class="check-icon">✓</span>
+            </div>
+            <div class="checklist-content">
+              <span class="checklist-item-title">Outcome over Feature Parity</span>
+              <p class="checklist-item-desc" id="desc-outcome-parity">
+                Are we building for better outcomes (e.g. reduced turnaround time) rather than just copying old features?
+              </p>
+            </div>
+          </label>
+        </div>
+
+      </div><!-- /checklist -->
+
+      <div class="info-callout" role="note">
+        <span class="callout-icon" aria-hidden="true">💡</span>
+        <p>Use this checklist at the start of every modernisation engagement to establish a shared fitness baseline with stakeholders.</p>
+      </div>
+
+      <!-- v2: Scoring matrix, export to PDF, shareable audit report -->
+    </section>
+
+
+    <!-- ------------------------------------------------
+         Tab 3: AI & Engineering Productivity Layer
+    ------------------------------------------------ -->
+    <section
+      id="tab-ai-layer"
+      class="tab-panel hidden"
+      role="tabpanel"
+      aria-labelledby="nav-ai-layer"
+      aria-hidden="true"
+    >
+      <div class="panel-header">
+        <div class="panel-icon" aria-hidden="true">🤖</div>
+        <div>
+          <h2 class="panel-title">AI & Engineering Productivity Layer</h2>
+          <p class="panel-subtitle">Efficiency — Agentic AI & Human–AI Collaboration</p>
+        </div>
+      </div>
+
+      <p class="panel-intro">
+        GovTech is moving toward "Agentic AI" — systems that act with greater autonomy to
+        accelerate delivery. These tools define the safety and speed rails for every AI-powered product.
+      </p>
+
+      <div class="card-grid">
+
+        <!-- Litmus -->
+        <div class="tool-card">
+          <div class="tool-card-header">
+            <span class="tool-icon" aria-hidden="true">🔬</span>
+            <div>
+              <h3 class="tool-name">Litmus</h3>
+              <span class="tool-tag">Safety Evaluation</span>
+            </div>
+          </div>
+          <p class="tool-desc">
+            Evaluates AI safety and reliability before go-live. Run Litmus assessments at
+            every major milestone to validate model outputs against government standards.
+          </p>
+          <div class="tool-badge">Pre-deployment</div>
+        </div>
+
+        <!-- Sentinel -->
+        <div class="tool-card">
+          <div class="tool-card-header">
+            <span class="tool-icon" aria-hidden="true">🛡️</span>
+            <div>
+              <h3 class="tool-name">Sentinel</h3>
+              <span class="tool-tag">Content Moderation</span>
+            </div>
+          </div>
+          <p class="tool-desc">
+            Real-time content moderation and output filtering for live AI systems. Ensures
+            citizen-facing AI outputs remain safe, accurate, and policy-compliant.
+          </p>
+          <div class="tool-badge">Live / Runtime</div>
+        </div>
+
+        <!-- Commute Build Standard (featured — spans full width) -->
+        <div class="tool-card tool-card--featured">
+          <div class="tool-card-header">
+            <span class="tool-icon" aria-hidden="true">🚄</span>
+            <div>
+              <h3 class="tool-name">The "Commute Build" Standard</h3>
+              <span class="tool-tag">Rapid Prototyping</span>
+            </div>
+          </div>
+          <p class="tool-desc">
+            Prioritises rapid, intent-driven prototyping (vibe coding) to reduce iteration cycles
+            by 20%+. A working prototype should be achievable in the time of a commute — turning
+            ideas into testable artefacts before stakeholders lose context.
+          </p>
+          <div class="tool-metric">
+            <span class="metric-value">20%+</span>
+            <span class="metric-label">Faster Iteration Cycles</span>
+          </div>
+        </div>
+
+      </div><!-- /card-grid -->
+
+      <!-- v2: Link to Litmus/Sentinel dashboards, usage guidelines, case study snippets -->
+    </section>
+
+
+    <!-- ------------------------------------------------
+         Tab 4: Infrastructure Standard
+    ------------------------------------------------ -->
+    <section
+      id="tab-infrastructure"
+      class="tab-panel hidden"
+      role="tabpanel"
+      aria-labelledby="nav-infrastructure"
+      aria-hidden="true"
+    >
+      <div class="panel-header">
+        <div class="panel-icon" aria-hidden="true">🏗️</div>
+        <div>
+          <h2 class="panel-title">The Infrastructure Standard</h2>
+          <p class="panel-subtitle">Execution — Standards That Scale</p>
+        </div>
+      </div>
+
+      <p class="panel-intro">
+        These are the non-negotiables. Every GovTech product must be built on these shared
+        foundations to ensure accessibility, security, and national-scale reliability.
+      </p>
+
+      <div class="card-grid">
+
+        <!-- SGDS -->
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <span class="infra-icon" aria-hidden="true">🎨</span>
+            <div>
+              <h3 class="infra-name">SGDS</h3>
+              <span class="infra-full-name">Singapore Government Design System</span>
+            </div>
+          </div>
+          <p class="infra-desc">
+            Plug-and-play UI components that ensure 100% WCAG 2.1 accessibility compliance
+            out of the box. Design with SGDS first — only deviate with a documented, justified reason.
+          </p>
+          <div class="compliance-badge">
+            <span aria-hidden="true">✅</span> WCAG 2.1 — 100% Compliant
+          </div>
+          <div class="infra-modules" aria-label="SGDS covers">
+            <span class="module-tag">Components</span>
+            <span class="module-tag">Typography</span>
+            <span class="module-tag">Colour Tokens</span>
+            <span class="module-tag">Accessibility</span>
+          </div>
+        </div>
+
+        <!-- SGTS -->
+        <div class="infra-card">
+          <div class="infra-card-header">
+            <span class="infra-icon" aria-hidden="true">⚙️</span>
+            <div>
+              <h3 class="infra-name">SGTS</h3>
+              <span class="infra-full-name">Singapore Government Tech Stack</span>
+            </div>
+          </div>
+          <p class="infra-desc">
+            Shared modules that handle national-scale complexity. Leverage SGTS integrations
+            instead of building from scratch — this is how you scale to 6M citizens.
+          </p>
+          <div class="infra-modules" aria-label="Key SGTS modules">
+            <span class="module-tag module-tag--highlight">Singpass</span>
+            <span class="module-tag module-tag--highlight">Myinfo</span>
+            <span class="module-tag module-tag--highlight">GovWallet</span>
+            <span class="module-tag">Notify</span>
+            <span class="module-tag">FormSG</span>
+          </div>
+        </div>
+
+      </div><!-- /card-grid -->
+
+      <!-- v2: Link to SGDS/SGTS docs, component library preview, compliance audit checklist -->
+    </section>
+
+
+    <!-- ------------------------------------------------
+         Tab 5: Value Proposition (for Nav Pawera)
+    ------------------------------------------------ -->
+    <section
+      id="tab-value-prop"
+      class="tab-panel hidden"
+      role="tabpanel"
+      aria-labelledby="nav-value-prop"
+      aria-hidden="true"
+    >
+      <div class="panel-header">
+        <div class="panel-icon" aria-hidden="true">🌉</div>
+        <div>
+          <h2 class="panel-title">The Value Proposition</h2>
+          <p class="panel-subtitle">For Nav Pawera — Principal Designer, GovTech</p>
+        </div>
+      </div>
+
+      <p class="panel-intro">
+        What makes this combination of healthtech rigour, enterprise scale, and design leadership
+        uniquely relevant to GovTech's modernisation agenda.
+      </p>
+
+      <div class="value-cards">
+
+        <!-- The Bridge -->
+        <div class="value-card value-card--bridge">
+          <span class="value-card-icon" aria-hidden="true">🌉</span>
+          <h3 class="value-card-title">The Bridge</h3>
+          <p class="value-card-desc">
+            Healthtech rigour from MOH and MSF engagement — directly relevant to GovTech's
+            citizen-facing mission. Enterprise-scale experience (3,000+ users) that maps to
+            serving 6M citizens.
+          </p>
+          <div class="value-pillars" aria-label="Key credentials">
+            <div class="pillar">
+              <span class="pillar-stat">MOH / MSF</span>
+              <span class="pillar-label">Healthtech Rigour</span>
+            </div>
+            <span class="pillar-divider" aria-hidden="true">→</span>
+            <div class="pillar">
+              <span class="pillar-stat">3,000+</span>
+              <span class="pillar-label">Users → 6M Citizens</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Multiplier -->
+        <div class="value-card value-card--multiplier">
+          <span class="value-card-icon" aria-hidden="true">✖️</span>
+          <h3 class="value-card-title">The Multiplier</h3>
+          <p class="value-card-desc">
+            Proven experience mentoring junior designers and aligning PMs and Engineers.
+            A senior designer who doesn't just ship — but multiplies the output of the
+            whole team.
+          </p>
+          <div class="multiplier-traits" aria-label="Key strengths">
+            <div class="trait">
+              <span class="trait-icon" aria-hidden="true">🎓</span>
+              <span>Mentors junior designers</span>
+            </div>
+            <div class="trait">
+              <span class="trait-icon" aria-hidden="true">🤝</span>
+              <span>Aligns PMs & Engineers</span>
+            </div>
+            <div class="trait">
+              <span class="trait-icon" aria-hidden="true">📈</span>
+              <span>Multiplies team output</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /value-cards -->
+
+      <!-- v2: Add portfolio case study deep-links, testimonials, impact metrics -->
+    </section>
+
+
+    <!-- ------------------------------------------------
+         Tab 6: Install App (PWA)
+    ------------------------------------------------ -->
+    <section
+      id="tab-install"
+      class="tab-panel hidden"
+      role="tabpanel"
+      aria-labelledby="nav-install"
+      aria-hidden="true"
+    >
+      <div class="panel-header">
+        <div class="panel-icon" aria-hidden="true">📲</div>
+        <div>
+          <h2 class="panel-title">Install App</h2>
+          <p class="panel-subtitle">Add to your home screen for the best experience</p>
+        </div>
+      </div>
+
+      <!--
+        Detected platform card + "already installed" banner
+        are injected here by install.js
+      -->
+      <div id="install-detected" class="install-detected-wrap" aria-live="polite"></div>
+
+      <!--
+        Native Android Chrome install button
+        (hidden until beforeinstallprompt fires, then shown by install.js)
+      -->
+      <div id="install-native-prompt" class="native-prompt hidden">
+        <button id="install-pwa-btn" class="install-btn">
+          <span aria-hidden="true">📲</span>
+          Install on this device
+        </button>
+      </div>
+
+      <!--
+        Other-platform accordion list
+        injected by install.js
+      -->
+      <div id="install-all-platforms" class="install-platforms"></div>
+
+    </section><!-- /tab-install -->
+
+    <!-- ======================================================
+         Site Footer — visible on every tab
+    ====================================================== -->
+    <footer id="app-footer" role="contentinfo">
+      <p>&copy; 2026 Aceson Aw. All rights reserved.</p>
+    </footer>
+
+  </main><!-- /main-content -->
+
+
+  <!-- ======================================================
+       Tab Navigation
+       Mobile: fixed bottom bar
+       Desktop: fixed left sidebar (via CSS)
+  ====================================================== -->
+  <nav id="tab-nav" role="tablist" aria-label="Playbook sections">
+
+    <button
+      class="nav-tab active"
+      id="nav-about"
+      data-target="tab-about"
+      role="tab"
+      aria-selected="true"
+      aria-controls="tab-about"
+    >
+      <span class="nav-icon" aria-hidden="true">📖</span>
+      <span class="nav-label">About</span>
+    </button>
+
+    <button
+      class="nav-tab"
+      id="nav-impact"
+      data-target="tab-impact"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-impact"
+    >
+      <span class="nav-icon" aria-hidden="true">📋</span>
+      <span class="nav-label">IMPACT</span>
+    </button>
+
+    <button
+      class="nav-tab"
+      id="nav-ai-layer"
+      data-target="tab-ai-layer"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-ai-layer"
+    >
+      <span class="nav-icon" aria-hidden="true">🤖</span>
+      <span class="nav-label">AI Layer</span>
+    </button>
+
+    <button
+      class="nav-tab"
+      id="nav-infrastructure"
+      data-target="tab-infrastructure"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-infrastructure"
+    >
+      <span class="nav-icon" aria-hidden="true">🏗️</span>
+      <span class="nav-label">Infra</span>
+    </button>
+
+    <button
+      class="nav-tab"
+      id="nav-value-prop"
+      data-target="tab-value-prop"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-value-prop"
+    >
+      <span class="nav-icon" aria-hidden="true">🌉</span>
+      <span class="nav-label">Value</span>
+    </button>
+
+    <button
+      class="nav-tab"
+      id="nav-install"
+      data-target="tab-install"
+      role="tab"
+      aria-selected="false"
+      aria-controls="tab-install"
+    >
+      <span class="nav-icon" aria-hidden="true">📲</span>
+      <span class="nav-label">Install</span>
+    </button>
+
+  </nav><!-- /tab-nav -->
+
+</div><!-- /#app -->
+
+<!-- Scripts — load order matters: config → modules → app -->
+<script src="js/config.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/install.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+/* ============================================================
+   GovTech Design Playbook — main.css
+   Global styles, design tokens, layout, typography
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Design Tokens (CSS Custom Properties)
+   v2: Consider moving tokens to a separate tokens.css file
+       and sourcing from SGDS official colour palette
+   ------------------------------------------------------------ */
+:root {
+  /* Brand Colours */
+  --color-primary:        #1a54a4;
+  --color-primary-dark:   #0d3880;
+  --color-primary-light:  #e8f0fb;
+  --color-accent:         #e8472a;
+  --color-accent-light:   #fdecea;
+
+  /* Semantic Colours */
+  --color-success:        #2d9e6b;
+  --color-success-light:  #e6f7f0;
+  --color-warning:        #f5a623;
+  --color-warning-light:  #fef6e7;
+
+  /* Neutral Palette */
+  --color-bg:             #f5f7fa;
+  --color-surface:        #ffffff;
+  --color-border:         #e2e8f0;
+  --color-border-light:   #f0f4f8;
+  --color-text-primary:   #1a1a2e;
+  --color-text-secondary: #4a5568;
+  --color-text-muted:     #718096;
+  --color-text-inverse:   #ffffff;
+
+  /* Typography */
+  --font-family:          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-size-xs:         0.75rem;    /* 12px */
+  --font-size-sm:         0.875rem;   /* 14px */
+  --font-size-base:       1rem;       /* 16px */
+  --font-size-md:         1.125rem;   /* 18px */
+  --font-size-lg:         1.25rem;    /* 20px */
+  --font-size-xl:         1.5rem;     /* 24px */
+  --font-size-2xl:        1.875rem;   /* 30px */
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+  --line-height-tight:    1.25;
+  --line-height-base:     1.6;
+  --line-height-relaxed:  1.75;
+
+  /* Spacing Scale */
+  --space-1:  0.25rem;   /* 4px */
+  --space-2:  0.5rem;    /* 8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+
+  /* Border Radius */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+  --radius-xl:   1rem;
+  --radius-2xl:  1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm:  0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md:  0 4px 6px rgba(0, 0, 0, 0.07), 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-lg:  0 10px 15px rgba(0, 0, 0, 0.07), 0 4px 6px rgba(0, 0, 0, 0.05);
+
+  /* Layout */
+  --header-height:     60px;
+  --nav-height:        64px;   /* Bottom tab bar height (mobile) */
+  --nav-width:         240px;  /* Sidebar width (desktop) */
+  --content-max-width: 800px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+
+  /* Safe Area (notched devices) */
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-area-top:    env(safe-area-inset-top, 0px);
+}
+
+/* ------------------------------------------------------------
+   Reset & Base
+   ------------------------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: var(--line-height-tight);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+p {
+  line-height: var(--line-height-base);
+}
+
+button {
+  font-family: var(--font-family);
+}
+
+/* Utility */
+.hidden {
+  display: none !important;
+}
+
+/* ------------------------------------------------------------
+   App Shell Layout — Mobile First
+   ------------------------------------------------------------ */
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+/* Header */
+#app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-primary);
+  color: var(--color-text-inverse);
+  height: var(--header-height);
+  padding-top: var(--safe-area-top);
+  box-shadow: var(--shadow-md);
+  flex-shrink: 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--space-4);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.header-logo {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.header-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  color: var(--color-text-inverse);
+}
+
+.header-subtitle {
+  font-size: var(--font-size-xs);
+  opacity: 0.75;
+  line-height: var(--line-height-tight);
+  display: none; /* revealed at ≥640px */
+}
+
+.version-badge {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+
+/* Main Content Area */
+#main-content {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Reserve space for bottom nav + device safe area */
+  padding-bottom: calc(var(--nav-height) + var(--safe-area-bottom) + var(--space-4));
+}
+
+/* Tab Panel */
+.tab-panel {
+  padding: var(--space-5) var(--space-4);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Site Footer — sits in the #main-content scroll flow */
+#app-footer {
+  padding: var(--space-5) var(--space-4);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border-light);
+  /* v2: If a fixed/sticky footer is ever needed, add position:sticky + bottom:0 */
+}
+
+/* Bottom Tab Navigation (Mobile) */
+#tab-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: stretch;
+  height: calc(var(--nav-height) + var(--safe-area-bottom));
+  padding-bottom: var(--safe-area-bottom);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ------------------------------------------------------------
+   Responsive: Tablet (≥640px)
+   ------------------------------------------------------------ */
+@media (min-width: 640px) {
+  .header-subtitle {
+    display: block;
+  }
+
+  .tab-panel {
+    padding: var(--space-8) var(--space-6);
+  }
+}
+
+/* ------------------------------------------------------------
+   Responsive: Desktop (≥1024px)
+   Switch to left sidebar navigation layout
+   v2: Consider a collapsible sidebar for medium viewports
+   ------------------------------------------------------------ */
+@media (min-width: 1024px) {
+  #app {
+    flex-direction: row;
+  }
+
+  /* Top header not needed — sidebar takes over branding */
+  #app-header {
+    display: none;
+  }
+
+  /* Sidebar navigation */
+  #tab-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    width: var(--nav-width);
+    height: 100vh;
+    flex-direction: column;
+    border-top: none;
+    border-right: 1px solid var(--color-border);
+    padding-bottom: 0;
+    box-shadow: var(--shadow-md);
+    background-color: var(--color-surface);
+    align-items: stretch;
+    overflow-y: auto;
+    justify-content: flex-start;
+  }
+
+  /* Sidebar branding header via pseudo-element */
+  #tab-nav::before {
+    content: 'Design Playbook';
+    display: block;
+    padding: var(--space-6) var(--space-5) var(--space-4);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: var(--space-2);
+    flex-shrink: 0;
+    letter-spacing: 0.01em;
+  }
+
+  #main-content {
+    margin-left: var(--nav-width);
+    padding-bottom: var(--space-12);
+    min-height: 100vh;
+  }
+
+  .tab-panel {
+    padding: var(--space-10) var(--space-8);
+  }
+}
