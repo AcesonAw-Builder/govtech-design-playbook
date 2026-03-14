@@ -27,7 +27,7 @@
   * **SGDS (Design System):** Using plug-and-play components to ensure 100% WCAG 2.1 accessibility compliance.  
   * **SGTS (Tech Stack):** Leveraging shared modules like Singpass, Myinfo, and GovWallet for "national-scale" complexity.
 
-**4\. The Value Proposition for Nav Pawera**
+**4\. The Value Proposition**
 
 * **The Bridge:** Aceson brings healthtech rigor (MOH/MSF relevance) and enterprise scale (3,000+ users to 6M citizens).  
 * **The Multiplier:** Proven experience mentoring junior designers and aligning PMs/Engineers.
